@@ -1,6 +1,8 @@
 
 CreatePlot4<-function(){
       
+      #Load .RDS files from function bufferdata() which is in Plots_main.R script
+      bufferdata()
       #get indices where (Short name) contains the word coal from SCC
       containscoalID <- grep("coal", MERGEDDATA$Short.Name, ignore.case = TRUE)
       containscoal <- MERGEDDATA[containscoalID,]

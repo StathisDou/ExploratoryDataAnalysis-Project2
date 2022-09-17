@@ -1,6 +1,8 @@
 ## Create plot 1 script file
 
 CreatePlot1<-function(){
+      #Load .RDS files from function bufferdata() which is in Plots_main.R script
+      bufferdata()
       #Create an array which will hold the sum of Emissions by Year from the NEI Table
       sumEmissions <- tapply(NEI$Emissions, NEI$year, sum)
       #Select device PNG
